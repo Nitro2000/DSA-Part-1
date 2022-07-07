@@ -6,6 +6,11 @@ import java.util.Scanner;
 Find target element in an array, "Array must be sorted in any order"
 
 TC: O(log(n)), omega(1), theta lies between 1 and log(n),  SC: theta(1)
+
+Key points to solve:
+First array is sorted indicates use BS
+Start and end cross point is important give various info
+Analyse both number and index
  */
 public class BinarySearch {
 
@@ -24,7 +29,7 @@ public class BinarySearch {
 
     static boolean findTarget(int target, int[] ar) {
         int start = 0;
-        int end = ar.length;
+        int end = ar.length - 1;
         while (start <= end) {
             int mid = start - (start - end) / 2;
             if (ar[mid] == target) {
@@ -39,7 +44,7 @@ public class BinarySearch {
     static boolean optimalFind(int target, int[] ar) {
         int diff = ar[ar.length - 1] - ar[0];
         int start = 0;
-        int end = ar.length;
+        int end = ar.length - 1;
         if (diff >= 0) {
             return findTarget(target, ar);
         } else {
