@@ -1,9 +1,9 @@
-package Search.LeetcodeSearch;
+package Search.LeetcodeSearch.Medium;
 
 // Problem num: 2226 Maximum Candies Allocated to K Children
 // Link: https://leetcode.com/problems/maximum-candies-allocated-to-k-children/
 
-public class MaxCandyAllocated {
+public class MaxCandyAllocated_2226 {
 
     // TC: O(candies.length + candies.length*log(sum(candies)) = O(n(log(sum(array)))), faster than 40%
     public int maximumCandies(int[] candies, long k) {

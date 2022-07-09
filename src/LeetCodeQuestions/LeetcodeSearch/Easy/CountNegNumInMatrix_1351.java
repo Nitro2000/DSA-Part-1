@@ -1,9 +1,9 @@
-package Search.LeetcodeSearch;
+package Search.LeetcodeSearch.Easy;
 
 // Problem num: 1351 Count Negative Numbers in a Sorted Matrix
 // Link: https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/
 
-class CountNegNumInMatrix {
+class CountNegNumInMatrix_1351 {
 
     // TC O(n + m) faster than 100%
     public int countNegatives(int[][] grid) {

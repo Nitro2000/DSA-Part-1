@@ -1,8 +1,8 @@
-package Search.LeetcodeSearch;
+package Search.LeetcodeSearch.Easy;
 
 // Problem num: 1539 kth-missing-positive-number
 // Link: https://leetcode.com/problems/kth-missing-positive-number/
-public class KthMissPositiveNum {
+public class KthMissPositiveNum_1539 {
 
     // TC: O(log(n)) faster than 100%
     public int findKthPositive(int[] arr, int k) {

@@ -1,10 +1,10 @@
-package Search.LeetcodeSearch;
+package Search.LeetcodeSearch.Easy;
 
 
 // Problem num: 704 Binary Search
 // Link: https://leetcode.com/problems/binary-search/
 
-public class BinarySearch {
+public class BinarySearch_704 {
 
     // TC: O(log(n)) faster than 100%
     public int search(int[] nums, int target) {

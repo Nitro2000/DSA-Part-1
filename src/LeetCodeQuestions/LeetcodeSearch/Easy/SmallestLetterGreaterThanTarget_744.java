@@ -1,9 +1,9 @@
-package Search.LeetcodeSearch;
+package Search.LeetcodeSearch.Easy;
 
 // Problem num 744: Find Smallest Letter Greater Than Target
 // Link: https://leetcode.com/problems/find-smallest-letter-greater-than-target/
 
-public class SmallestLetterGreaterThanTarget {
+public class SmallestLetterGreaterThanTarget_744 {
 
     // TC: O(log(n)) faster than 100%
     public char nextGreatestLetter(char[] letters, char target) {

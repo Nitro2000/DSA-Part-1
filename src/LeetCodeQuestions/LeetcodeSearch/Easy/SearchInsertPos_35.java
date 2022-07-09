@@ -1,8 +1,8 @@
-package Search.LeetcodeSearch;
+package Search.LeetcodeSearch.Easy;
 
 // Problem num: 35 Search insert position
 // Link: https://leetcode.com/problems/search-insert-position/
-class SearchInsertPos {
+class SearchInsertPos_35 {
 
     // TC: O(log(n)) faster than 100%
     public int searchInsert(int[] nums, int target) {
