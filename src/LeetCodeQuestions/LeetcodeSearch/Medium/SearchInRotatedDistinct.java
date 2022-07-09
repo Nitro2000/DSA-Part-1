@@ -3,7 +3,7 @@ package LeetCodeQuestions.LeetcodeSearch.Medium;
 // Problem num: 33 Search in Rotated Sorted Array
 // Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
 
-public class SearchInRotated {
+public class SearchInRotatedDistinct {
 
     // TC: O(3log(n)) = O(log(n)), faster than 73%
     public int search(int[] nums, int target) {

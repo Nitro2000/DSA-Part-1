@@ -1,6 +1,6 @@
-package Search.LeetcodeSearch.Easy;
+package LeetCodeQuestions.LeetcodeSearch.Easy;
 
-// Problem num: 35 Search insert position
+// Problem num: 35 Algorithms.Search insert position
 // Link: https://leetcode.com/problems/search-insert-position/
 class SearchInsertPos_35 {
 

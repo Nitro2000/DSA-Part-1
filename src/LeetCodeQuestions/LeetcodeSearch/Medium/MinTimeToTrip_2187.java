@@ -1,4 +1,4 @@
-package Search.LeetcodeSearch.Medium;
+package LeetCodeQuestions.LeetcodeSearch.Medium;
 
 // Problem num: 2187 Minimum Time to Complete Trips
 // Link: https://leetcode.com/problems/minimum-time-to-complete-trips/

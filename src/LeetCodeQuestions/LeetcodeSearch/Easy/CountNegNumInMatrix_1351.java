@@ -1,4 +1,4 @@
-package Search.LeetcodeSearch.Easy;
+package LeetCodeQuestions.LeetcodeSearch.Easy;
 
 // Problem num: 1351 Count Negative Numbers in a Sorted Matrix
 // Link: https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/

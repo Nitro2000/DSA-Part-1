@@ -1,4 +1,4 @@
-package Search.LeetcodeSearch.Medium;
+package LeetCodeQuestions.LeetcodeSearch.Medium;
 
 // Problem num: 2226 Maximum Candies Allocated to K Children
 // Link: https://leetcode.com/problems/maximum-candies-allocated-to-k-children/

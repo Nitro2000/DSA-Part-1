@@ -1,7 +1,7 @@
-package Search.LeetcodeSearch.Easy;
+package LeetCodeQuestions.LeetcodeSearch.Easy;
 
 
-// Problem num: 704 Binary Search
+// Problem num: 704 Binary Algorithms.Search
 // Link: https://leetcode.com/problems/binary-search/
 
 public class BinarySearch_704 {

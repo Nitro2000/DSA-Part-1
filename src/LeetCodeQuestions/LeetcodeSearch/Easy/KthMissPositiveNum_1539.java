@@ -1,4 +1,4 @@
-package Search.LeetcodeSearch.Easy;
+package LeetCodeQuestions.LeetcodeSearch.Easy;
 
 // Problem num: 1539 kth-missing-positive-number
 // Link: https://leetcode.com/problems/kth-missing-positive-number/

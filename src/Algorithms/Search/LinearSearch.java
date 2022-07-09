@@ -1,6 +1,5 @@
-package Search;
+package Algorithms.Search;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 // Finding a target element in an array

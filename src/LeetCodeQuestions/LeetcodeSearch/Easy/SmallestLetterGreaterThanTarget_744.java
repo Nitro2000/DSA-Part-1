@@ -1,4 +1,4 @@
-package Search.LeetcodeSearch.Easy;
+package LeetCodeQuestions.LeetcodeSearch.Easy;
 
 // Problem num 744: Find Smallest Letter Greater Than Target
 // Link: https://leetcode.com/problems/find-smallest-letter-greater-than-target/
