@@ -4,7 +4,7 @@ package LeetCodeQuestions.LeetcodeSearch.Medium;
 // Problem num: 74 Search a 2D Matrix
 // Link: https://leetcode.com/problems/search-a-2d-matrix/
 
-public class SearchIn2D {
+public class SearchIn2D_74 {
 
     // TC: O(log(n*m)), faster than 100%
     public boolean searchMatrix(int[][] matrix, int target) {

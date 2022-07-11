@@ -3,7 +3,7 @@ package LeetCodeQuestions.LeetcodeSearch.Medium;
 // Problem num: 34 Find First and Last Position in Sorted Array
 // Link: https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
-public class FindFirstLastPos {
+public class FindFirstLastPos_34 {
 
     // TC: O(log(n)), faster than 100%
     public int[] searchRange(int[] nums, int target) {

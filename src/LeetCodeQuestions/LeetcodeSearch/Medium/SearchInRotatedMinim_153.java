@@ -3,7 +3,7 @@ package LeetCodeQuestions.LeetcodeSearch.Medium;
 // Problem num: 153 Find Minimum in Rotated Sorted Array
 // Link: https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 
-public class SearchInRotatedMinim {
+public class SearchInRotatedMinim_153 {
 
     // TC: O(log(n)), faster than 100%
     public int findMin(int[] nums) {

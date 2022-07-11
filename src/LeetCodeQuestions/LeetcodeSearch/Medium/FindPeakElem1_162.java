@@ -3,7 +3,7 @@ package LeetCodeQuestions.LeetcodeSearch.Medium;
 // Problem num: 162 Find Peak Element
 // Link: https://leetcode.com/problems/find-peak-element/
 
-public class FindPeakElem1 {
+public class FindPeakElem1_162 {
 
     // TC: O(log(n)) , faster than 100%
     public int findPeakElement(int[] nums) {

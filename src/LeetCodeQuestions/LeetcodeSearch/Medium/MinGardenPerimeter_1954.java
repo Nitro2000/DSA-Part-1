@@ -4,7 +4,7 @@ package LeetCodeQuestions.LeetcodeSearch.Medium;
 // Problem num: 1954 Minimum Garden Perimeter to Collect Enough Apples
 // Link: https://leetcode.com/problems/minimum-garden-perimeter-to-collect-enough-apples/
 
-public class MinGardenPerimeter {
+public class MinGardenPerimeter_1954 {
 
     // TC: O(log(10^6)) = O(1) constant, faster than 98%
     public long minimumPerimeter(long neededApples) {

@@ -8,6 +8,8 @@ Find target element in an array, "Array must be sorted in any order"
 TC: O(log(n)), omega(1), theta lies between 1 and log(n),  SC: theta(1)
 
 Key points to solve:
+start index gives us just bigger(just larger) than target
+end index gives us just smaller than target
 First array is sorted indicates use BS
 Start and end cross point is important give various info it gives the closest bigger num than target
 Analyse both number and index
