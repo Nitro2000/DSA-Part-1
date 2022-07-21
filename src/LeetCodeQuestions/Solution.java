@@ -1,35 +1,59 @@
 package LeetCodeQuestions;
 
+import java.util.Arrays;
+
 class Solution {
-    public int[] twoSum(int[] numbers, int target) {
-        int firstHalf = numbers[0];
-        int secHalf = numbers[1];
+    public int latestTimeCatchTheBus(int[] buses, int[] passengers, int capacity) {
+        Arrays.sort(buses);
+        Arrays.sort(passengers);
+
+
         int start = 0;
-        int mid = 0;
-        int end = numbers.length - 1;
-        while (start <= end) {
-            mid = start + (end - start) / 2;
-            firstHalf = binarySearch(numbers, start, mid - 1, target, mid);
-            if (firstHalf != -1) return new int[]{firstHalf + 1, mid + 1};
-            else {
-                secHalf = binarySearch(numbers, mid + 1, end, target, mid);
-                if (secHalf != -1) return new int[]{mid + 1, secHalf + 1};
-                else {
-                    if (target - numbers[mid] > numbers[mid]) start = mid + 1;
-                    else end = mid - 1;
-                }
-            }
+
+        int last = binaryMin(passengers, 0, passengers.length - 1, buses[0], capacity);
+
+
+
+        for (int i = 1; i < buses.length; i++) {
+            start = last + 1;
+            last = binaryMin(passengers, last + 1, passengers.length - 1, buses[i], capacity);
         }
-        return new int[]{0,0};
+
+
+
+        if (last - start + 1 < capacity) {
+            return check(true, buses[buses.length - 1], last, passengers);
+        } else {
+            return check(false, 0, last, passengers);
+        }
+
     }
-    
-    public int binarySearch(int[] ar, int start, int end, int target, int sum) {
+
+    private int check(boolean less, int upper,  int last, int[] passenger) {
+        int count = less ? upper : passenger[last];
+
+        for (int i = last; i > 0; i--) {
+            if (passenger[i] != count) return count;
+            else count--;
+        }
+
+        return count == passenger[0] ? count - 1 : count;
+    }
+
+    private int binaryMin(int[] pass, int start, int end, int target, int capacity) {
+        int begin = start;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (sum + ar[mid] == target) return mid;
-            else if (sum + ar[mid] > target) end = mid - 1;
-            else start = mid + 1;
+            if (pass[mid] > target) end = mid - 1;
+            else {
+                if (mid - begin + 1 > capacity) {
+                    end = mid - 1;
+                } else {
+                    start = mid + 1;
+                }
+
+            }
         }
-        return -1;
+        return end;
     }
 }

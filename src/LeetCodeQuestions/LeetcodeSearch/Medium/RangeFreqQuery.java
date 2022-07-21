@@ -1,5 +1,8 @@
 package LeetCodeQuestions.LeetcodeSearch.Medium;
 
+
+// Not completed
+
 public class RangeFreqQuery {
 
     int[] ar;

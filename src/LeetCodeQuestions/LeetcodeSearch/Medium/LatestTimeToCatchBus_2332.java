@@ -5,7 +5,7 @@ package LeetCodeQuestions.LeetcodeSearch.Medium;
 
 import java.util.Arrays;
 
-public class LatestTimeToCatchBus {
+public class LatestTimeToCatchBus_2332 {
 
     // TC: O(nlog(n) + mlog(m) + nlog(m) + m) = O(nlog(n) + (n + m)log(m)), if n == m O(nlog(n)), faster than 50%
     public int latestTimeCatchTheBus(int[] buses, int[] passengers, int capacity) {
