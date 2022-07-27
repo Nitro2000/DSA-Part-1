@@ -1,10 +1,11 @@
 package LeetCodeQuestions.LeetcodeSorting.Easy;
 
 // Problem num: 268 Missing number
-// Link: 
+// Link: https://leetcode.com/problems/missing-number/
 
-public class MissingNumber {
+public class MissingNumber_268 {
 
+    // TC: O(n), faster than 32%, another solution is faster than 73%
     public int missingNumber(int[] nums) {
         // We can do this by many methods like bit (XOR), sum(n) - sum(given), cycle sort
         int i = 0;
