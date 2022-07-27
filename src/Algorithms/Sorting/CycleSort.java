@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class CycleSort {
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int arrLength = sc.nextInt();
         int[] arr = new int[arrLength];
@@ -25,6 +26,7 @@ public class CycleSort {
         cycleSort1(arr);
         System.out.println(Arrays.toString(arr));
     }
+
 
     // for range 0 < ar[i] < n, TC: O(n)
     private static void cycleSort1(int[] ar) {
