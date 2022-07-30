@@ -1,12 +1,12 @@
 package LeetCodeQuestions.LeetcodeSorting.Easy;
 
-// Problem num: 628 Maximum Product of Three Numbers
-// Link: https://leetcode.com/problems/maximum-product-of-three-numbers/
+// Problem num: 976 Largest Perimeter Triangle
+// Link: https://leetcode.com/problems/largest-perimeter-triangle/
 
 
 import java.util.Arrays;
 
-public class LargestParameterTri {
+public class LargestParameterTri_976 {
 
     // TC: O(nlog(n)) because of sorting, faster than 71% (logic is 100% faster if u refresh and submit)
     public int largestPerimeter(int[] nums) {
