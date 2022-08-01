@@ -5,7 +5,7 @@ package LeetCodeQuestions.LeetcodeSorting.Medium;
 
 import java.util.*;
 
-public class Sum3 {
+public class Sum3_15 {
 
     // TC: O(nlog(n) + n^2) = O(n^2), faster than 68%, SC: O(n), faster than 95%
     public List<List<Integer>> threeSum(int[] nums) {
