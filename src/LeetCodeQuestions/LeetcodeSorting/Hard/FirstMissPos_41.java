@@ -1,4 +1,4 @@
-package LeetCodeQuestions.LeetcodeSearch.Hard;
+package LeetCodeQuestions.LeetcodeSorting.Hard;
 
 // Problem num: 41 First Missing Positive
 // Link: https://leetcode.com/problems/first-missing-positive/
