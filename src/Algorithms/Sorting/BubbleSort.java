@@ -33,6 +33,8 @@ public class BubbleSort {
             }
             if (!swapped) break;
         }
+
+        String s  = Arrays.toString(ar);
     }
 
     private static void swap(int[] ar, int a, int b) {

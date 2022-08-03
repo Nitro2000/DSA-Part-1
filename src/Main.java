@@ -1,5 +1,6 @@
 import LeetCodeQuestions.LeetcodeSearch.Medium.RangeFreqQuery;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
@@ -14,19 +15,14 @@ public class Main  {
     public static void main(String[] args)         throws InterruptedException
     {
 
-        Set<Integer> set = new HashSet<>();
-        set.add(23);
-        set.add(45);
-        set.add(34);
-        set.add(34);
-        List<Integer> ls = new ArrayList<>();
+        int[] arr = {4, 5, 3, 1, 7, 3};
+        arr[1] = arr[1]*-1;
+        arr[3] = arr[3]*-1;
+        arr[5] = arr[4]*-1;
+        System.out.println(Arrays.toString(arr));
 
-        for (Integer i : set) {
-            ls.add(i);
-        }
 
-        set.remove(34);
-        System.out.println(set + " " + ls);
+
 
         Map<Integer, Integer> map = new HashMap<>();
         System.out.println(map.put(2, 4));
