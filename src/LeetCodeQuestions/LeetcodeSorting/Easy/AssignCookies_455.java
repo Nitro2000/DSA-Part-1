@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class AssignCookies_455 {
 
-    // TC: O(nlog(n), faseter than 70%
+    // TC: O(nlog(n), faster than 70%
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);
