@@ -5,7 +5,7 @@ package LeetCodeQuestions.LeetcodeSorting.Easy;
 
 public class SetMismatch_645 {
 
-    // TC: O(n), faster than 60%
+    // TC: O(n), faster than 60%, can be more optimised using binary or simple sum method
     public int[] findErrorNums(int[] nums) {
         int i = 0;
         while (i < nums.length) {
