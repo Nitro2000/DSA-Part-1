@@ -14,22 +14,10 @@ public class Main  {
 
     public static void main(String[] args)         throws InterruptedException
     {
-        int ans = 0;
-        for (int i = 0; i <= 10; i++) {
-            ans ^= i;
-
-        }
-        System.out.println(ans);
+        System.out.println('\0');
 
 
-
-        Map<Integer, Integer> map = new HashMap<>();
-        System.out.println(map.put(2, 4));
-        System.out.println(map.put(2, 4));
-        int[] ar = new int[] {1, 3, 4, 5};
-        int[] c = ar.clone();
-
-        ar[1] = 8;
+        System.out.println("ab".substring(0, 1));
 
     }
 }
