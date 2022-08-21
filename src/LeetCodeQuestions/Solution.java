@@ -1,32 +1,47 @@
-package LeetCodeQuestions;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 class Solution {
-    public List<List<Integer>> minimumAbsDifference(int[] arr) {
+    public List<Integer> grayCode(int n) {
+        return graySeq(n, 0, new ArrayList<Integer>() {
+            {
+                add(0);
+            }
+        });
+    }
 
-        Arrays.sort(arr);
+    private List<Integer> graySeq(int n, int prev, List<Integer> result) {
 
-        List<List<Integer>> ls = new ArrayList<>();
+        if (result.size() == Math.pow(2, n)) return result;
 
+        for (int i = 1; i < Math.pow(2, n); i++) {
 
-        int mini = 10000000;
-        for (int i = 0; i < arr.length - 1; i++) {
-            mini = Math.min(mini, Math.abs(arr[i] - arr[i + 1]));
-        }
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            if (Math.abs(arr[i] - arr[i + 1]) == mini) {
-                List<Integer> lss = new ArrayList<>();
-                lss.add(2);
-                lss.add(3);
-                ls.add(lss);
+            if (check(prev, i, n, result)) {
+                result.add(i);
+                List<Integer> ans = graySeq(n, i, result);
+                if (ans.size() == Math.pow(2, n)) return ans;
+                result.remove((Integer) i);
             }
         }
-        return ls;
+        return result;
+    }
 
+    private boolean check(int prev, int next, int length, List<Integer> result) {
 
+        if (result.contains(next)) return false;
+        if (result.size() == Math.pow(2, length) - 1) {
+            int a = (int) (Math.log(next) / Math.log(2));
+            if (next != (1 << a)) return false;
+        }
+
+        int count = 0;
+        while (length-- != 0) {
+            if ((prev & 1) != (next & 1)) {
+                count++;
+            }
+            prev >>= 1;
+            next >>= 1;
+        }
+
+        return count == 1;
     }
 }
