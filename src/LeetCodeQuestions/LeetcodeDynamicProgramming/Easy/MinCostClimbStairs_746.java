@@ -3,7 +3,7 @@ package LeetCodeQuestions.LeetcodeDynamicProgramming.Easy;
 // Problem num: 746 Min Cost Climbing Stairs
 // Link: https://leetcode.com/problems/min-cost-climbing-stairs/
 
-class MinCostClimbStairs_746 {
+public class MinCostClimbStairs_746 {
 
     // TC: O(n), faster than 90%
     public int minCostClimbingStairs(int[] cost) {
