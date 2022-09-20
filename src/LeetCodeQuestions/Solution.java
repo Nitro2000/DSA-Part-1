@@ -1,47 +1,39 @@
+package LeetCodeQuestions;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
-class Solution {
-    public List<Integer> grayCode(int n) {
-        return graySeq(n, 0, new ArrayList<Integer>() {
-            {
-                add(0);
-            }
-        });
+public class Solution {
+
+
+    public static int bucketId(int itemID) {
+        int answer = 0;
+
+        while (itemID > 0) {
+            int digit = itemID % 10;
+            answer = Math.max(digit, answer);
+            itemID /= 10;
+        }
+        return answer;
     }
 
-    private List<Integer> graySeq(int n, int prev, List<Integer> result) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] arrrr = new int[6];
+        ArrayList<Integer> arr = new ArrayList<Integer>(arrrr.length);
 
-        if (result.size() == Math.pow(2, n)) return result;
+        String input_from_question = br.readLine();
 
-        for (int i = 1; i < Math.pow(2, n); i++) {
-
-            if (check(prev, i, n, result)) {
-                result.add(i);
-                List<Integer> ans = graySeq(n, i, result);
-                if (ans.size() == Math.pow(2, n)) return ans;
-                result.remove((Integer) i);
-            }
-        }
-        return result;
-    }
-
-    private boolean check(int prev, int next, int length, List<Integer> result) {
-
-        if (result.contains(next)) return false;
-        if (result.size() == Math.pow(2, length) - 1) {
-            int a = (int) (Math.log(next) / Math.log(2));
-            if (next != (1 << a)) return false;
-        }
+        int n = input_from_question.charAt(0) - 48;
+        int num = input_from_question.charAt(2) - 48;
 
         int count = 0;
-        while (length-- != 0) {
-            if ((prev & 1) != (next & 1)) {
-                count++;
-            }
-            prev >>= 1;
-            next >>= 1;
+        for (int i = 4; i < input_from_question.length(); i += 2) {
+            if (num == input_from_question.charAt(i) - 48) count++;
         }
 
-        return count == 1;
+        System.out.println(n - count);
     }
 }
