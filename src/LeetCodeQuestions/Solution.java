@@ -1,39 +1,35 @@
 package LeetCodeQuestions;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
-public class Solution {
+class Solution {
 
+    public int distributeCookies(int[] cookies, int k) {
+        List<List<Integer>>[][] dp = new ArrayList[k + 1][cookies.length + 1];
 
-    public static int bucketId(int itemID) {
-        int answer = 0;
+        dp[2][2] = List.of(new ArrayList<>(cookies[0]), new ArrayList<>(cookies[1]));
 
-        while (itemID > 0) {
-            int digit = itemID % 10;
-            answer = Math.max(digit, answer);
-            itemID /= 10;
-        }
-        return answer;
-    }
+        for (int i = 2; i < k; i++) {
+            for (int j = 3; j < cookies.length; j++) {
+                dp[i][j] = new ArrayList<>();
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int[] arrrr = new int[6];
-        ArrayList<Integer> arr = new ArrayList<Integer>(arrrr.length);
+                if (i > 2) {
 
-        String input_from_question = br.readLine();
+                } else {
+                    for (int l = 0; l < dp[i][j - 1].size(); l++) {
+                        dp[i][j - 1].get(l).add(cookies[j]);
+                        dp[i][j].add(dp[i][j - 1].get(l));
+                    }
+                }
 
-        int n = input_from_question.charAt(0) - 48;
-        int num = input_from_question.charAt(2) - 48;
+            }
 
-        int count = 0;
-        for (int i = 4; i < input_from_question.length(); i += 2) {
-            if (num == input_from_question.charAt(i) - 48) count++;
         }
 
-        System.out.println(n - count);
+
+        return 0;
     }
 }
