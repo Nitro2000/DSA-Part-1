@@ -22,7 +22,15 @@ public class Sorting2DArray {
     }
 
     // Second method to sort 2D array
-    public void sort(int[][] ar, int columnNum) {
-        Arrays.sort(ar, (a, b) -> a[columnNum] - b[columnNum]);
+    public void sortCompChain(int[][] ar, int columnNum) {
+        Arrays.sort(ar, Comparator.comparingInt((int[] a) -> a[columnNum]).thenComparingInt(a -> a[columnNum + 1]));
+    }
+
+    public void sortLambda(int[][] ar, int columnNum) {
+        Arrays.sort(ar, (a, b) -> {
+            int ans = a[columnNum] - b[columnNum];
+            if (ans == 0) ans = a[columnNum + 1] - b[columnNum + 1];
+            return ans;
+        });
     }
 }
