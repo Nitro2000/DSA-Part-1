@@ -20,7 +20,7 @@ class Solution {
         vowel[3] = 'o';
         vowel[4] = 'u';
 
-        List<Character> dp = Arrays.asList(vowel);
+//        List<Character> dp = Arrays.asList(vowel);
 
         int[] a = ar.clone();
         a[0] = 4;
